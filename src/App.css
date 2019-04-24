@@ -1,0 +1,73 @@
+.App {
+  text-align: left;
+}
+
+.form{
+  background-color: white;
+  margin: 5px;
+  padding: 3px;
+  padding: 5px;
+  width: 300px;
+  border-radius: 5px;
+  border: 2px solid black;
+}
+
+.label{
+  display: inline-block;
+  width: 30%;
+}
+
+input.TextField{
+  height: 15px;
+  width: 50%;
+  background-color: white;
+}
+
+.TextField{
+  border: 1px solid black;
+  margin: 5px;
+  padding-left: 1px;
+  border-radius: 5px;
+  background-color: cyan;
+}
+
+li{
+  display: inline-block; 
+  margin: 5px;
+  background-color: blueviolet;
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+ul{
+  background-color: white;
+  border: 1px solid black;
+}
+
+
+
+.content{
+  background-color: cornflowerblue;
+  padding: 10px;
+  
+}
+
+button{
+  margin: 2px;
+  border-radius: 5px;
+}
+
+
+table {
+  border: 2px solid black;
+  margin: auto;
+}
+
+th {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px solid black;
+} 
