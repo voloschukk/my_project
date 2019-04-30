@@ -25,7 +25,7 @@ class UsersList extends Component{
         const usersList = this.state.usersList;
         const idUser = event.target.id;
         for (let i=0; i<usersList.length; i++){
-            if(usersList[i].id == idUser){
+            if(usersList[i].id.toString() === idUser){
                 event.target.checked? usersList[i].access = true: usersList[i].access = false;
                 break;
             }
@@ -38,7 +38,7 @@ class UsersList extends Component{
         const usersList = this.state.usersList;
         const idUser = event.target.id;
         for (let i=0; i<usersList.length; i++){
-            if(usersList[i].id == idUser){
+            if(usersList[i].id.toString() === idUser){
                 event.target.checked? usersList[i].admin = true: usersList[i].admin = false;
                 break;
             }
@@ -77,7 +77,7 @@ class UsersList extends Component{
         
         return (
             <div>
-                <table class="table table-striped table-dark table-bordered table-hover table-sm">
+                <table className="table table-striped table-light table-bordered table-hover table-sm">
                 <caption>Users List</caption>
                     <tr>   
                         <th>Id</th><th>Name</th><th>Password</th><th>Access</th><th>Admin</th><th>Delete</th>

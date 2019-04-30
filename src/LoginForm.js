@@ -9,9 +9,8 @@ class LoginForm extends Component {
       info: "",
     };
 
-    onSMTChange = event => {
-      if (event.target.name === "Login") this.setState({login: event.target.value});
-      if (event.target.name === "Password") this.setState({password: event.target.value});
+    onFieldChange = event => {
+      this.setState({[event.target.name]: event.target.value});
     }
 
     gotoReg = () =>{
@@ -24,14 +23,14 @@ class LoginForm extends Component {
         for (let i=0; i<usersList.length; i++){
           if(usersList[i].name === login && usersList[i].password === password && usersList[i].access === true ){
             this.setState({info : ""});
-            this.props.isSuccess(usersList[i]);
+            this.props.onSuccess(usersList[i]);
             return;
           };
         };
 
         if("admin" === login && "admin" === password ){
           this.setState({info : ""});
-          this.props.isSuccess({id: 0, name: "admin", password: "admin", access: true, admin: true});
+          this.props.onSuccess({id: 0, name: "admin", password: "admin", access: true, admin: true});
         }
 
         this.setState({info : "Incorrect login or password"});
@@ -41,17 +40,17 @@ class LoginForm extends Component {
     render() {
       return (
         <div>
-          <div class="container">
-            <button class="btn btn-warning" onClick = {() => this.gotoReg()}> Registration Form </button>
+          <div className="container">
+            <button className="btn btn-warning" onClick = {() => this.gotoReg()}> Registration Form </button>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div>Login Form</div>
-              <TextField name="Login" label="Login" onChange={this.onSMTChange} />
-              <TextField name="Password" label="Password" onChange={this.onSMTChange} />
-              <input type="button" class="btn btn-primary" value="LogIn" onClick = {() => {this.onClickLogin()}}/>
+              <TextField name="login" label="Login" onChange={this.onFieldChange} />
+              <TextField name="password" label="Password" onChange={this.onFieldChange} />
+              <input type="button" className="btn btn-primary" value="LogIn" onClick = {() => {this.onClickLogin()}}/>
           </div>
-          <div class="container">
-            <div className="info" class="alert alert-danger" role="alert">{this.state.info}</div>
+          <div className="container">
+            <div className="alert alert-danger" role="alert">{this.state.info}</div>
           </div>
         </div>
       )

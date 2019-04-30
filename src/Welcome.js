@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 //import './App.css';
 
 class Welcome extends Component {
-    constructor(props) {
-      super(props);
-    }
 
     onClickLogOut(){
         this.props.onClickLogouth();
@@ -17,7 +14,7 @@ class Welcome extends Component {
   return (
     <div>
       <div>Welcome, {this.props.login}!</div>
-      <button onClick = {() => {this.onClickLogOut()}}> LogOut </button>
+      <button className="btn btn-light" onClick = {() => {this.onClickLogOut()}}> LogOut </button>
     </div>
   )
   }

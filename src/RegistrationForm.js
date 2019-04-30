@@ -10,10 +10,8 @@ class RegistrationForm extends Component {
       info: "",
     };
   
-    onSMTChange = event => {
-      if (event.target.name === "userLogin") this.setState({userLogin: event.target.value});
-      if (event.target.name === "userPassword") this.setState({userPassword: event.target.value});
-      if (event.target.name === "phoneNumber") this.setState({phoneNumber: event.target.value}); 
+    onFieldChange = event => {
+      this.setState({[event.target.name]: event.target.value});
     }
 
     gotoLog = () =>{
@@ -39,18 +37,18 @@ class RegistrationForm extends Component {
     render() {
       return (
         <div>
-          <div class="container">
-            <button class="btn btn-warning" onClick = {() => this.gotoLog()}> Login Form </button>
+          <div className="container">
+            <button className="btn btn-warning" onClick = {() => this.gotoLog()}> Login Form </button>
           </div>
-          <div class="form-group">
+          <div className="form-group">
             <div>Registration Form</div>
-            <TextField name="userLogin" label="Login" onChange={this.onSMTChange} />
-            <TextField name="userPassword" label="Password" onChange={this.onSMTChange} />
-            <TextField name="phoneNumber" label="Phone number" onChange={this.onSMTChange} />
-            <input class="btn btn-primary" type="button" value="Registration" onClick = {() => this.onClickRegistration()}/>
+            <TextField name="userLogin" label="Login" onChange={this.onFieldChange} />
+            <TextField name="userPassword" label="Password" onChange={this.onFieldChange} />
+            <TextField name="phoneNumber" label="Phone number" onChange={this.onFieldChange} />
+            <input className="btn btn-primary" type="button" value="Registration" onClick = {() => this.onClickRegistration()}/>
           </div>
-          <div class="container">
-            <div className="info" class="alert alert-danger" role="alert">{this.state.info}</div>
+          <div className="container">
+            <div className="alert alert-danger" role="alert">{this.state.info}</div>
           </div>
         </div>
       );
