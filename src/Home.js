@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-//import './App.css';
 import Users from './Users';
 import СrossZero from './СrossZero';
 import Snake from './Snake';

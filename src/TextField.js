@@ -1,5 +1,4 @@
-import React, { Component } from 'react';
-//import './App.css';
+import React from 'react';
 
 const TextField = ({name, onChange, label}) => (
     // <div className="TextField">
@@ -8,8 +7,8 @@ const TextField = ({name, onChange, label}) => (
     //   <input className="TextField" type="text" name={name} onChange = {onChange} />
     // </div>
     <div className="form-group row">
-        <label for="label" className="col-sm-2 col-form-label">{label}</label>
-        <div className="col-sm-10">
+        <label for="label" className="col-sm-4 col-form-label">{label}</label>
+        <div className="col">
         <input type="text" className="form-control" id="textField" placeholder={label} name={name} onChange = {onChange}/>
         </div>
     </div>

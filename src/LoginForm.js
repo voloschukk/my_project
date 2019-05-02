@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import TextField from './TextField';
-//import './App.css';
 
 class LoginForm extends Component {
     state = {
@@ -40,9 +39,6 @@ class LoginForm extends Component {
     render() {
       return (
         <div>
-          <div className="container">
-            <button className="btn btn-warning" onClick = {() => this.gotoReg()}> Registration Form </button>
-          </div>
           <div className="form-group">
             <div>Login Form</div>
               <TextField name="login" label="Login" onChange={this.onFieldChange} />
@@ -51,6 +47,9 @@ class LoginForm extends Component {
           </div>
           <div className="container">
             <div className="alert alert-danger" role="alert">{this.state.info}</div>
+          </div>
+          <div className="container">
+            <button className="btn btn-link" onClick = {() => this.gotoReg()}> Registration Form </button>
           </div>
         </div>
       )

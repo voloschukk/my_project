@@ -101,33 +101,31 @@ class Todo extends Component{
         return(
             <div>
                 <div className="container mt-3 mb-2">
-                <div className="row">
-                    <div className="col-sm">
-                        <input className="form-control" type="text" id="newTask" value={this.state.newTask} onChange={this.onCangeNewTask}/>
-                        
+                    <div className="row">
+                        <div className="col-sm">
+                            <input className="form-control" type="text" id="newTask" value={this.state.newTask} onChange={this.onCangeNewTask}/>
+                        </div>
+                        <div className="col-sm">
+                            <button className="btn btn-light" id="addNewTask" onClick={this.addNewTask}>Add new task</button>
+                        </div>
+                        <div className="col-md-auto">
+                            <button className="btn btn-light" id="addToDoneList" onClick={this.addToDoneList}>Done</button>
+                        </div>
                     </div>
-                    <div className="col-sm">
-                        <button className="btn btn-light" id="addNewTask" onClick={this.addNewTask}>Add new task</button>
-                    </div>
-                    <div className="col-md-auto">
-                        <button className="btn btn-light" id="addToDoneList" onClick={this.addToDoneList}>Done</button>
-                    </div>
-                </div>
                 </div>
 
                 <div className="container">
-                <table className="table table-striped table-light table-bordered table-hover table-sm">
-                <caption>TODO List</caption>
-                    <thead className="thead-light">
-                        <tr>   
-                            <th>Id</th><th>Task</th><th>Check</th><th></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {todoListItems}
-                    </tbody>
-                    
-                </table>
+                    <table className="table table-striped table-light table-bordered table-hover table-sm">
+                    <caption>TODO List</caption>
+                        <thead className="thead-light">
+                            <tr>   
+                                <th>Id</th><th>Task</th><th>Check</th><th>Check status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {todoListItems}
+                        </tbody>
+                    </table>
                 </div>
 
                 <div className="container">
