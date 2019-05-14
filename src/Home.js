@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import Users from './Users';
-import СrossZero from './СrossZero';
-import Snake from './Snake';
-import Todo from './Todo';
+import СrossZero from './games/СrossZero';
+import Snake from './games/Snake';
+import Todo from './todo/Todo';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 
 class Home extends Component{
